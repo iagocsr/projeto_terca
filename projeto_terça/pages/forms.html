@@ -32,39 +32,65 @@
               />
             </div>
             <div class="box-input">
-              <label for="state"
-                >Estado<span class="required-field">*</span></label>
+              <label for="cep"
+                >CEP<span class="required-field">*</span></label>
               <input
                 type="text"
-                name="state"
-                id="state"
+                name="cep"
+                id="cep"
                 class="block"
-                placeholder="Coloque de qual estado a instituição é"
+                placeholder="Coloque o cep da instituição"
                 required
+                onblur="pesquisacep(this.value);"
               />
             </div>
             <div class="box-input">
-              <label for="district"
-                >Bairro <span class="required-field">*</span></label>
+              <label for="uf"
+                >Estado<span class="required-field">*</span></label>
               <input
-              type="text"
-                name="district"
-                id="district"
+                type="text"
+                name="uf"
+                id="uf"
                 class="block"
-                placeholder="Coloque a que bairro a instituição pertence"
+                placeholder="Estado"
+                disabled
+              />
+            </div>
+            <div class="box-input">
+              <label for="cidade"
+                >Cidade <span class="required-field">*</span></label>
+              <input
+                type="text"
+                name="cidade"
+                id="cidade"
+                class="block"
+                placeholder="Cidade"
+                disabled
               >
             </div>
             <div class="box-input">
-              <label for="adress"
-                >Endereço <span class="required-field">*</span></label
+              <label for="bairro"
+                >Bairro <span class="required-field">*</span></label>
+              <input
+                type="text"
+                name="bairro"
+                id="bairro"
+                class="block"
+                placeholder="Bairro"
+                disabled
+              >
+            </div>
+            <div class="box-input">
+              <label for="rua"
+                >Rua <span class="required-field">*</span></label
               >
               <input
                 type="text"
-                name="adress"
-                id="adress"
+                name="rua"
+                id="rua"
                 class="block"
-                placeholder="Digite o endereço da instituição"
-                required
+                placeholder="Rua"
+                disabled
               />
             </div>
             <div class="box-input">
@@ -86,4 +112,5 @@
       </div>
     </div>
   </body>
+  <script src="../js/forms.js"></script>
 </html>
