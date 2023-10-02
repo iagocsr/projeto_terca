@@ -28,6 +28,7 @@ body .sub-tittle{
     font: 1.5rem;
     color: #eee5e9;
     opacity: 0.5;
+    text-align: center;
 }
 body .user-input-section {
     display: flex;
@@ -70,14 +71,14 @@ body .button {
     border-radius:0.5rem ;
     padding: 1rem 2rem;
     margin-bottom: 3rem;
-    background-color: #20c520;
+    background-color: #2cc76a;
     color: #fff;
     font-size: 1.6rem;
     cursor: pointer;
     transition: 0.5s;
 }
 button:hover {
-    background-color: #20c52050;
+    background-color: #135f32;
 }
 
 body .qr-code-container {

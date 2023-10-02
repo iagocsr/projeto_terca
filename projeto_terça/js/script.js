@@ -12,15 +12,13 @@ function cpf(v){
 
 btn.addEventListener("click", ( ) => {
 let input_nome = document.querySelector("#input_nome");
-let input_email = document.querySelector("#input_email");
 let input_matricula = document.querySelector("#input_matricula");
 
-    if (input_nome.value != "" && input_matricula.value != "" && input_email.value != "") {
+    if (input_nome.value != "" && input_matricula.value != "") {
         
         let values = {
             nome: input_nome.value,
-            matricula: input_matricula.value,
-            email: input_email.value
+            matricula: input_matricula.value
         }
 
         if (qr_code_element.childElementCount == 0) {
