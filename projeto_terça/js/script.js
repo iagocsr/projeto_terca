@@ -1,23 +1,43 @@
 let btn = document.querySelector(".button");
 let qr_code_element = document.querySelector(".qr-code");
 
+function cpf(v){
+    v=v.replace(/\D/g,"")                    //Remove tudo o que não é dígito
+    v=v.replace(/(\d{3})(\d)/,"$1.$2")       //Coloca um ponto entre o terceiro e o quarto dígitos
+    v=v.replace(/(\d{3})(\d)/,"$1.$2")       //Coloca um ponto entre o terceiro e o quarto dígitos
+                                             //de novo (para o segundo bloco de números)
+    v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2") //Coloca um hífen entre o terceiro e o quarto dígitos
+    return v
+}
+
 btn.addEventListener("click", ( ) => {
-let user_input = document.querySelector("#input_text");
-    if (user_input.value != "") {
+let input_nome = document.querySelector("#input_nome");
+let input_matricula = document.querySelector("#input_matricula");
+
+    if (input_nome.value != "" && input_matricula.value != "") {
+        
+        let values = {
+            nome: input_nome.value,
+            matricula: input_matricula.value
+        }
+
         if (qr_code_element.childElementCount == 0) {
-            generate(user_input);    
+            generate(values);    
         } else {
             qr_code_element.innerHTML = "";
-            generate(user_input);
+            generate(values);   
         }
     }else {
         qr_code_element.style = "display:none"
+        alert("Preencha todos os campos!")
     }
 });
 
-function generate(user_input){
+function generate(value){
     qr_code_element.style = "";
-    console.log(user_input.value)
+
+    console.log(value)
+
     let qrcode = new QRCode(qr_code_element, {
         width: 180, //128
         height: 180,
@@ -26,7 +46,7 @@ function generate(user_input){
         correctLevel:QRCode.CorrectLevel.H
     });
 
-    qrcode.makeCode(user_input.value)
+    qrcode.makeCode(JSON.stringify(value))
 
     let download = document.createElement("button");
     qr_code_element.appendChild(download);
@@ -52,5 +72,5 @@ function generate(user_input){
 }
 
 generate({
-    value:"https://codepen.io/coding_dev_"
+    value:"Hello World!"
 });
