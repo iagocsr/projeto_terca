@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venda seu carro</title>
+    <link rel="stylesheet" href="../css/forms.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+      </div>
+      <div class="form-container">
+        <div class="form-header">
+          <p>Formulário</p>
+        </div>
+        <div class="form-body">
+          <h1 class="form-title">Coloque suas informações!</h1>
+            <div class="box-input">
+              <label for="title">Nome da instituição <span class="required-field">*</span></label
+              >
+              <input
+                type="text"
+                name="title"
+                id="title"
+                class="block"
+                placeholder="Coloque aqui o nome de sua instituição"
+                minlength="1"
+                maxlength="30"
+                required
+              />
+            </div>
+            <div class="box-input">
+              <label for="state"
+                >Estado<span class="required-field">*</span></label>
+              <input
+                type="text"
+                name="state"
+                id="state"
+                class="block"
+                placeholder="Coloque de qual estado a instituição é"
+                required
+              />
+            </div>
+            <div class="box-input">
+              <label for="district"
+                >Bairro <span class="required-field">*</span></label>
+              <input
+              type="text"
+                name="district"
+                id="district"
+                class="block"
+                placeholder="Coloque a que bairro a instituição pertence"
+              >
+            </div>
+            <div class="box-input">
+              <label for="adress"
+                >Endereço <span class="required-field">*</span></label
+              >
+              <input
+                type="text"
+                name="adress"
+                id="adress"
+                class="block"
+                placeholder="Digite o endereço da instituição"
+                required
+              />
+            </div>
+            <div class="box-input">
+              <label for="CNPJ"
+                >CNPJ <span class="required-field">*</span></label
+              >
+              <input
+                type="number"
+                name="CNPJ"
+                id="CNPJ"
+                class="block"
+                placeholder="Digite o CNPJ da instituição"
+                required
+              />
+            </div>
+        </form>
+        <a href="qrcode.html"><input type="button" value="Enviar" class="btn-submit"/></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
