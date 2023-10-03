@@ -15,19 +15,29 @@
         <div class="form-header">
           <p>Formulário</p>
         </div>
-        <div class="form-body">
+        <form class="form-body">
           <h1 class="form-title">Coloque suas informações!</h1>
             <div class="box-input">
               <label for="title">Nome da instituição <span class="required-field">*</span></label
               >
               <input
                 type="text"
-                name="title"
+                name="nome"
                 id="title"
                 class="block"
-                placeholder="Coloque aqui o nome de sua instituição"
                 minlength="1"
                 maxlength="30"
+                required
+              />
+            </div>
+            <div class="box-input">
+              <label for="title">Email<span class="required-field">*</span></label
+              >
+              <input
+                type="text"
+                name="email"
+                id="email"
+                class="block"
                 required
               />
             </div>
@@ -39,9 +49,9 @@
                 name="cep"
                 id="cep"
                 class="block"
-                placeholder="Coloque o cep da instituição"
                 required
                 onblur="pesquisacep(this.value);"
+                maxlength="9"
               />
             </div>
             <div class="box-input">
@@ -49,10 +59,8 @@
                 >Estado<span class="required-field">*</span></label>
               <input
                 type="text"
-                name="uf"
                 id="uf"
                 class="block"
-                placeholder="Estado"
                 disabled
               />
             </div>
@@ -61,10 +69,8 @@
                 >Cidade <span class="required-field">*</span></label>
               <input
                 type="text"
-                name="cidade"
                 id="cidade"
                 class="block"
-                placeholder="Cidade"
                 disabled
               >
             </div>
@@ -73,10 +79,8 @@
                 >Bairro <span class="required-field">*</span></label>
               <input
                 type="text"
-                name="bairro"
                 id="bairro"
                 class="block"
-                placeholder="Bairro"
                 disabled
               >
             </div>
@@ -86,10 +90,8 @@
               >
               <input
                 type="text"
-                name="rua"
                 id="rua"
                 class="block"
-                placeholder="Rua"
                 disabled
               />
             </div>
@@ -98,12 +100,13 @@
                 >CNPJ <span class="required-field">*</span></label
               >
               <input
-                type="number"
-                name="CNPJ"
+                type="text"
+                name="cnpj"
                 id="CNPJ"
                 class="block"
-                placeholder="Digite o CNPJ da instituição"
                 required
+                maxlength="14"
+                onblur="cnpj(this.value)"
               />
             </div>
         </form>
