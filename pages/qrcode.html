@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRCode TPS</title>
+    <link rel="stylesheet" href="../css/qrcode_styles.css">
+    <script src="../js/qrcode.js"></script>
+    <script src="../js/qrcode.min.js"></script>
+</head>
+<body>
+<div class="user-input-section">
+    <section class="headling">
+        <div class="tittle">Adicionar indivíduo</div>
+        <div class="sub-tittle">Vamos gerar seu QRCode !</div>
+    </section>
+    <section class="user-input">
+        <input type="text" placeholder="Nome" name="input_nome" id="input_nome">
+        <input type="text" placeholder="Email" name="email" id="input_email">
+        <input type="text" placeholder="Matrícula ou CPF" name="input_matricula" id="input_matricula">
+        <button type="submit" class="button">Salvar</button>
+    </section>
+</div>
+<div class="qr-code-container">
+    <div class="qr-code"></div>
+</div>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

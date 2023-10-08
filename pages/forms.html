@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário TPS</title>
+    <link rel="stylesheet" href="../css/forms.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+      </div>
+      <div class="form-container">
+        <div class="form-header">
+          <p>Formulário</p>
+        </div>
+        <form class="form-body">
+          <h1 class="form-title">Coloque suas informações!</h1>
+            <div class="box-input">
+              <label for="title">Nome da instituição <span class="required-field">*</span></label
+              >
+              <input
+                type="text"
+                name="nome"
+                id="title"
+                class="block"
+                minlength="1"
+                maxlength="30"
+                required
+              />
+            </div>
+            <div class="box-input">
+              <label for="title">Email<span class="required-field">*</span></label
+              >
+              <input
+                type="text"
+                name="email"
+                id="email"
+                class="block"
+                required
+              />
+            </div>
+            <div class="box-input">
+              <label for="cep"
+                >CEP<span class="required-field">*</span></label>
+              <input
+                type="text"
+                name="cep"
+                id="cep"
+                class="block"
+                required
+                onblur="pesquisacep(this.value);"
+                maxlength="9"
+              />
+            </div>
+            <div class="box-input">
+              <label for="uf"
+                >Estado<span class="required-field">*</span></label>
+              <input
+                type="text"
+                id="uf"
+                class="block"
+                disabled
+              />
+            </div>
+            <div class="box-input">
+              <label for="cidade"
+                >Cidade <span class="required-field">*</span></label>
+              <input
+                type="text"
+                id="cidade"
+                class="block"
+                disabled
+              >
+            </div>
+            <div class="box-input">
+              <label for="bairro"
+                >Bairro <span class="required-field">*</span></label>
+              <input
+                type="text"
+                id="bairro"
+                class="block"
+                disabled
+              >
+            </div>
+            <div class="box-input">
+              <label for="rua"
+                >Rua <span class="required-field">*</span></label
+              >
+              <input
+                type="text"
+                id="rua"
+                class="block"
+                disabled
+              />
+            </div>
+            <div class="box-input">
+              <label for="CNPJ"
+                >CNPJ <span class="required-field">*</span></label
+              >
+              <input
+                type="text"
+                name="cnpj"
+                id="CNPJ"
+                class="block"
+                required
+                maxlength="14"
+                onblur="cnpj(this.value)"
+              />
+            </div>
+        </form>
+        <a href="qrcode.html"><input type="button" value="Enviar" class="btn-submit"/></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/forms.js"></script>
+</html>
