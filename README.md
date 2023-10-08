@@ -5,4 +5,5 @@
 * Iago Luan - 01522453
 * Lohana Lislie - 01536654
 * Ramon De Souza - 01506931
-* Willian Barbosa - 01506070
+* Wendell Felix Amaral  - 01519971
+* William Barbosa de Souza - 01506070
